@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Componente buscador HTMl renderizado structure esperada 1`] = `
+<div
+  class="input-group input-group-lg sizeInput"
+>
+  <span
+    class="input-group-text"
+  >
+    <font-awesome-icon
+      icon="search"
+    />
+  </span>
+   
+  <input
+    aria-label="Search"
+    class="form-control"
+    placeholder="Search"
+    type="text"
+  />
+</div>
+`;

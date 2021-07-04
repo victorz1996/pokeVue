@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Componente loading HTMl renderizado structure esperada 1`] = `
+<div>
+  <div
+    class="row"
+  >
+    <div
+      class="col-sm-12"
+    >
+      <img
+        class="carga"
+        src="loading.png"
+      />
+    </div>
+  </div>
+</div>
+`;

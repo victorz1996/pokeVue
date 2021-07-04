@@ -4,7 +4,10 @@ proyecto elaborado en el framework javasript "VueJs2" con el fin de solventar pr
 ```
 npm run docs
 ```
-
+## Testing unit a componentes del proyecto
+```
+npm run test
+```
 ## Project setup
 ```
 npm install

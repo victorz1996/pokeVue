@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Componente NoExiste HTMl renderizado structure esperada 1`] = `
+<div
+  class="mt-4"
+>
+  <h2>
+    <strong>
+      Uh-oh!
+    </strong>
+  </h2>
+   
+  <h6>
+    You look lost on your journey!
+  </h6>
+   
+  <button
+    class="btn botonNoExiste mt-3"
+  >
+    Go back home
+  </button>
+</div>
+`;

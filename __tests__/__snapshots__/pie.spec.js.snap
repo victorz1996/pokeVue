@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Componente Pie HTMl renderizado structure esperada 1`] = `
+<nav
+  class="centerClass navbar fixed-bottom navbar-dark bg-light"
+>
+  <button
+    class="btn botonPie"
+    id="todos"
+  >
+    <font-awesome-icon
+      class="iconPosition"
+      icon="bars"
+    />
+    All
+  
+  </button>
+   
+  <button
+    class="btn botonPie"
+    id="favoritos"
+  >
+    <font-awesome-icon
+      class="iconPosition"
+      icon="star"
+    />
+    Favorites
+  
+  </button>
+</nav>
+`;
