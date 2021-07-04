@@ -1,0 +1,18 @@
+.centerClass {
+    display: flex;
+    justify-content: center;
+  }
+.navbar-text {
+    color: black !important;
+}
+.botonPie {
+    border-radius: 10rem;
+    color: aliceblue;
+    height: 40px;
+    width: 330px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.iconPosition {
+    margin-right: 5px;
+}

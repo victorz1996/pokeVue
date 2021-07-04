@@ -1,0 +1,23 @@
+.botonModal {
+    background: #f22539;
+    border-radius: 10rem;
+    color: aliceblue;
+    height: 40px;
+    width: 170px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.iconoModal{
+    position: absolute;
+    right: 20px;
+}
+.btn-circleModal {
+    width: 40px;
+    height: 40px;
+    padding: 6px 0px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 12px;
+    background: rgb(238, 236, 234);
+    line-height: 1.42857;
+  }

@@ -1,0 +1,11 @@
+
+.img {
+    max-height: 300px;
+}
+.boton {
+    background: #f22539;
+    border-radius: 10rem;
+    color: aliceblue;
+    height: 50px;
+    width: 120px;
+}
