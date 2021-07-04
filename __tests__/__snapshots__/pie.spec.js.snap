@@ -5,7 +5,7 @@ exports[`Componente Pie HTMl renderizado structure esperada 1`] = `
   class="centerClass navbar fixed-bottom navbar-dark bg-light"
 >
   <button
-    class="btn botonPie"
+    class="btn botonPie mt-2"
     id="todos"
   >
     <font-awesome-icon
@@ -17,7 +17,7 @@ exports[`Componente Pie HTMl renderizado structure esperada 1`] = `
   </button>
    
   <button
-    class="btn botonPie"
+    class="btn botonPie mt-2"
     id="favoritos"
   >
     <font-awesome-icon
