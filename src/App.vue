@@ -1,13 +1,19 @@
 <template>
   <div>
     <div class="mb-5" id="app">
+      <!-- Componente de inicio de la app  -->
       <Wellcome @iniciar="init($event)" v-if="wellcome" />
+      <!-- Componente de carga de la aplicacion  -->
       <Loading v-if="loading" />
+      <!-- Listados de pokemones -->
       <div class="container" v-if="!loading && listar">
+        <!-- Input para filtrar pokemones -->
         <Buscador @filtro="buscarPoke($event)" />
+        <!-- Vista para cuando no existe la busqueda  -->
         <div v-if="!pokemonesFiltered.length">
           <NoExiste @volverInit="volver($event)" />
         </div>
+        <!-- Lista de todos los pokemones -->
         <div v-show="listarTodos" class="mt-5 mb-5">
           <ul class="list-group">
             <li
@@ -40,6 +46,7 @@
             </li>
           </ul>
         </div>
+        <!-- Lista de todos los pokemones favoritos -->
         <div v-show="listarFav" class="mt-5 mb-5">
           <ul class="list-group">
             <li
@@ -63,6 +70,7 @@
         </div>
       </div>
     </div>
+    <!-- Footer -->
     <div v-if="!loading && listar && pokemonesFiltered.length">
       <Pie @listar="cambioLista($event)" />
     </div>
@@ -105,6 +113,11 @@
 </template>
 
 <script>
+/**
+ * @namespace App
+ * @description Componente principal de la aplicacion
+ * @author       Victor Zabala <victorma164@gmail.com>
+ */
 import Wellcome from "../src/components/Welcome/Wellcome.vue";
 import Loading from "../src/components/Loading/Loading.vue";
 import Buscador from "../src/components/Buscador/Buscador.vue";
@@ -138,6 +151,12 @@ export default {
     };
   },
   methods: {
+    /**
+     * @memberOf App
+     * @function volver volver
+     * @description Metodo que se ejecuta para volver al inicio de la app
+     * @param {Boolean} even
+     */
     volver(even) {
       if (even) {
         this.wellcome = true;
@@ -145,6 +164,12 @@ export default {
         this.pokemonesFavoritosFiltered = [];
       }
     },
+    /**
+     * @memberOf App
+     * @function buscarPoke buscar pokemon
+     * @description Metodo que se ejecuta para realizar la busqueda de los pokemones
+     * @param {Boolean} event
+     */
     buscarPoke(event) {
       if (this.listarTodos) {
         if (event.length) {
@@ -165,6 +190,14 @@ export default {
         }
       }
     },
+    /**
+     * @memberOf App
+     * @async
+     * @function obtenerPoke obtener pokemon
+     * @description Metodo que se ejecuta para obtener informacion de un pokemon
+     * en especifico
+     * @param {String} nombre
+     */
     async obtenerPoke(nombre) {
       const resp = await axios.get(
         `https://pokeapi.co/api/v2/pokemon/${nombre}`
@@ -173,6 +206,13 @@ export default {
         this.infoPoke = resp.data;
       }
     },
+    /**
+     * @memberOf App
+     * @function cambioLista cambiar lista
+     * @description Metodo que se ejecuta para cambiar la lista de pokemones que
+     * se visualiza
+     * @param {Boolean} event
+     */
     cambioLista(event) {
       if (event === "todos") {
         this.listarTodos = true;
@@ -183,6 +223,14 @@ export default {
         this.listarFav = true;
       }
     },
+    /**
+     * @memberOf App
+     * @function favorito favorito
+     * @description Metodo que se ejecuta para agregar o quitar pokemones
+     * de las lista de favoritos
+     * @param {Object} pokemon
+     * @param {Int} index
+     */
     favorito(pokemon, index) {
       this.pokemones[index].fav = !this.pokemones[index].fav;
       const element = document.getElementById(index + "all");
@@ -196,6 +244,13 @@ export default {
       );
       this.pokemonesFavoritosFiltered = this.pokemonesFavoritos;
     },
+    /**
+     * @memberOf App
+     * @async
+     * @function traerPokemons obtener pokemones
+     * @description Metodo que se ejecuta para obtener informacion de todos los
+     * pokemones
+     */
     async traerPokemons() {
       const res = await axios.get("https://pokeapi.co/api/v2/pokemon");
       if (res.data) {
@@ -206,6 +261,12 @@ export default {
         this.listar = true;
       }
     },
+    /**
+     * @memberOf App
+     * @function init iniciar
+     * @description Metodo que se ejecuta para iniciar la aplicacion
+     * @param {Boolean} e
+     */
     init(e) {
       if (e) {
         this.wellcome = false;

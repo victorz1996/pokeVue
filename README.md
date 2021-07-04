@@ -1,6 +1,9 @@
 # pokevue
 proyecto elaborado en el framework javasript "VueJs2" con el fin de solventar prueba de frontend consumiendo la API de pokemones
-
+## Generar documentacion estatica HTML de los metodos del proyecto apartir de su documentacion
+```
+npm run docs
+```
 
 ## Project setup
 ```
