@@ -1,5 +1,12 @@
 # pokevue
-proyecto elaborado en el framework javasript "VueJs2" con el fin de solventar prueba de frontend consumiendo la API de pokemones
+proyecto elaborado en el framework javasript "VueJs2" con el fin de solventar prueba de frontend consumiendo la API de pokemones.
+se usaron las siguientes tecnologias:
+-Jest para pruebas unitarias de los componentes.
+-Bootstrap 5 para diseño de UI
+-JsDocs para documentacion del codigo
+-axios para peticiones Http
+-Vue-clipboard2 para copiar informacion al portapapeles
+-Fontawesome para iconos
 ## Generar documentacion estatica HTML de los metodos del proyecto apartir de su documentacion
 ```
 npm run docs
