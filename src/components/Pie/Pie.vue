@@ -1,12 +1,12 @@
 <template>
   <nav class="centerClass navbar fixed-bottom navbar-dark bg-light">
-    <button @click="cambioLista('todos')" id="todos" class="btn botonPie">
+    <button @click="cambioLista('todos')" id="todos" class="btn botonPie mt-2">
       <font-awesome-icon class="iconPosition" icon="bars" />All
     </button>
     <button
       @click="cambioLista('favoritos')"
       id="favoritos"
-      class="btn botonPie"
+      class="btn botonPie mt-2"
     >
       <font-awesome-icon class="iconPosition" icon="star" />Favorites
     </button>
