@@ -7,6 +7,8 @@ se usaron las siguientes tecnologias:
 -axios para peticiones Http
 -Vue-clipboard2 para copiar informacion al portapapeles
 -Fontawesome para iconos
+
+Version de Node: 14.17.3 LTS
 ## Generar documentacion estatica HTML de los metodos del proyecto apartir de su documentacion
 ```
 npm run docs
