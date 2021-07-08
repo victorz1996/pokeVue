@@ -84,7 +84,10 @@
         aria-hidden="true"
       >
         <div class="modal-dialog modal-lg">
-          <div class="modal-content">
+          <div class="text-center" v-show="cargandoModal">
+            <Loading />
+          </div>
+          <div v-show="!cargandoModal" class="modal-content">
             <div class="modal-header">
               <img
                 class="centerImg"
@@ -148,6 +151,7 @@ export default {
       listarTodos: true,
       listarFav: false,
       infoPoke: null,
+      cargandoModal: false,
     };
   },
   methods: {
@@ -199,11 +203,15 @@ export default {
      * @param {String} nombre
      */
     async obtenerPoke(nombre) {
+      this.cargandoModal = true;
       const resp = await axios.get(
         `https://pokeapi.co/api/v2/pokemon/${nombre}`
       );
       if (resp) {
         this.infoPoke = resp.data;
+        setTimeout(() => {
+          this.cargandoModal = false;
+        }, 1000);
       }
     },
     /**
